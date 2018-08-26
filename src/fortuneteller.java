@@ -4,11 +4,13 @@ public class fortuneteller {
 
 	public static void main(String[] args) {
 //variables
-		double age = 0;
-		double birthMonth = 0;
+		String firstName = "";
+		String lastName = "";
+		String age = "0";
+		String birthMonth = "0";
 		String favoriteColor = "";
-		double numberSiblings = 0;
-//questions
+		String Siblings = "0";
+//questions - double value = Double.parseDouble(text)
 		System.out.println("What is your first name?");
 		System.out.println("What is your last name?");
 		System.out.println("What is your age?");
@@ -32,13 +34,15 @@ public class fortuneteller {
 		
 //age
 		System.out.println("What is your age?");
-		age = input.nextDouble();
+		age = input.nextLine();
 		input.nextLine();
+		double ageAsNumber = Double.parseDouble(age);
 		
 //birth month - add catch for typed age and convert to number
 		System.out.println("What is your birth month as a number (for example if you were born in March type 3?");
-		birthMonth = input.nextDouble();
+		birthMonth = input.nextLine();
 		input.nextLine();
+		double birthAsNumber = Double.parseDouble(birthMonth);
 		
 //Favorite color
 		System.out.println("What is your favorite ROYGBIV color?");
@@ -47,7 +51,8 @@ public class fortuneteller {
 		
 //siblings
 		System.out.println("How many siblings do you have?");
-		numberSiblings = input.nextDouble();
+		siblings = input.nextLine();
+		double siblingsAsNumber = Double.parseDouble(siblings)
 		
 //final return *[First Name]* *[Last Name]* will retire in *[# of years]* with *[bank balance]* in the bank, a vacation home in *[location]*, and travel by *[mode of transporation]*.
 
