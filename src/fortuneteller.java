@@ -93,7 +93,35 @@ public class fortuneteller {
 			System.out.println(firstName + " " + lastName + " , you do not exist. Therefore time is irrellevant, as are fortunes.");
 			System.exit(0);
 		}
-		
+//values for retirement years based on age
+		double retirementAge = (70 - ageAsNumber);
+
+//values for vacation home
+		int siblingsInt = (int) siblingsAsNumber;
+		if (siblingsInt > 5) {
+			siblingsInt = 6;
+		}
+		String siblingsString;
+		switch (siblingsInt) {
+		case 1: 
+			siblingsString = "Boca Raton, Florida with your parents.";
+			break;
+		case 2: 
+			siblingsString = "Branson, Missouri.";
+			break;	
+		case 3: 
+			siblingsString = "Deep Creek Lake, Maryland.";
+			break;
+		case 4: 
+			siblingsString = "Denver, Colorado.";
+			break;
+		case 5: 
+			siblingsString = "Biloxi, Mississipi.";
+			break;
+		case 6: 
+			siblingsString = "Gallway, Ireland";
+			break;	
+		}
 		
 		//end
 		input.close();
