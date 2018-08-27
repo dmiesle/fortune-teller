@@ -76,25 +76,46 @@ public class fortuneteller {
 //test variables		System.out.println(firstName + " " + lastName + " " + ageAsNumber + " "+ birthAsNumber + " " + favoriteColor + " "+ siblingsAsNumber);
 
 //exceeds or fails to meet a reasonable age
-		
-		if (ageAsNumber > 70 && ageAsNumber <120) {
-			System.out.println(firstName + " " + lastName + ", you are already retired. Enjoy your life and stop worring about the future. Unless you go back to school and start a new carrer you have what you have");
+
+		if (ageAsNumber > 70 && ageAsNumber < 120) {
+			System.out.println(firstName + " " + lastName
+					+ ", you are already retired. Enjoy your life and stop worring about the future. Unless you go back to school and start a new carrer you have what you have");
 			System.exit(0);
-		}
-		else if (ageAsNumber >=120 && ageAsNumber <= 200000) {
-			System.out.println(firstName + " " + lastName + " you are long dead. Tell me why you are so interested in this program? Why don't you tell me your fortune?");
+		} else if (ageAsNumber >= 120 && ageAsNumber <= 200000) {
+			System.out.println(firstName + " " + lastName
+					+ " you are long dead. Tell me why you are so interested in this program? Why don't you tell me your fortune?");
 			System.exit(0);
-		}
-		else if (ageAsNumber >200000) {
+		} else if (ageAsNumber > 200000) {
 			System.out.println("Winter is coming.");
 			System.exit(0);
-		}
-		else if (ageAsNumber <= 0) {
-			System.out.println(firstName + " " + lastName + " , you do not exist. Therefore time is irrellevant, as are fortunes.");
+		} else if (ageAsNumber <= 0) {
+			System.out.println(firstName + " " + lastName
+					+ " , you do not exist. Therefore time is irrellevant, as are fortunes.");
+			System.exit(0);
+		} else if (birthAsNumber > 12) {
+			System.out.println(firstName + " " + lastName
+					+ " , you are in jail for forging Federal Documents, and will die there.");
 			System.exit(0);
 		}
 //values for retirement years based on age
 		double retirementAge = (70 - ageAsNumber);
+
+//values for bank balance
+		if (birthAsNumber == 3) {
+			String balance = "$50,000,000";
+		} else if (birthAsNumber == 9) {
+			String balance = "$4,567,890";
+		} else if (birthAsNumber == 12) {
+			String balance = "$9,876,543";
+		} else if (birthAsNumber == 1) {
+			String balance = "$0";
+		} else if (birthAsNumber == 2) {
+			String balance = "$324,741";
+		} else if (birthAsNumber > 3 && birthAsNumber < 9) {
+			String balance = "$185,453";
+		} else if (birthAsNumber > 3 && birthAsNumber < 12) {
+			String balance = "$754,135";
+		}
 
 //values for vacation home
 		int siblingsInt = (int) siblingsAsNumber;
@@ -103,27 +124,27 @@ public class fortuneteller {
 		}
 		String siblingsString;
 		switch (siblingsInt) {
-		case 1: 
-			siblingsString = "Boca Raton, Florida with your parents.";
+		case 1:
+			siblingsString = "Boca Raton, Florida with your parents";
 			break;
-		case 2: 
-			siblingsString = "Branson, Missouri.";
-			break;	
-		case 3: 
-			siblingsString = "Deep Creek Lake, Maryland.";
+		case 2:
+			siblingsString = "Branson, Missouri";
 			break;
-		case 4: 
-			siblingsString = "Denver, Colorado.";
+		case 3:
+			siblingsString = "Deep Creek Lake, Maryland";
 			break;
-		case 5: 
-			siblingsString = "Biloxi, Mississipi.";
+		case 4:
+			siblingsString = "Denver, Colorado";
 			break;
-		case 6: 
+		case 5:
+			siblingsString = "Biloxi, Mississipi";
+			break;
+		case 6:
 			siblingsString = "Gallway, Ireland";
-			break;	
+			break;
 		}
-		
-		//end
+
+		// end
 		input.close();
 	}
 
