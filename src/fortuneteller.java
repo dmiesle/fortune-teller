@@ -44,7 +44,7 @@ public class fortuneteller {
 		if (monthlength > 2) {
 			String birthUpper = birthMonth.toUpperCase();
 			Month birthNumber = Month.valueOf(birthUpper);
-			birthNumber = birthNumber.getValue();
+			birthAsNumber = birthNumber.getValue();
 		} else {
 			birthAsNumber = Double.parseDouble(birthMonth);
 		}
@@ -52,28 +52,29 @@ public class fortuneteller {
 //Favorite color
 		System.out.println("What is your favorite ROYGBIV color?");
 		String favoriteColor = input.nextLine();
-		while (!favoriteColor.equals ("red") || !favoriteColor.equals("orange") || !favoriteColor.equals("yellow")
+		while (!favoriteColor.equals("red") || !favoriteColor.equals("orange") || !favoriteColor.equals("yellow")
 				|| !favoriteColor.equals("green") || !favoriteColor.equals("blue") || !favoriteColor.equals("indigo")
 				|| !favoriteColor.equals("violet"))
 			if (favoriteColor.equals("Help") || favoriteColor.equals("help") || favoriteColor.equals("HELP")) {
 				System.out.println("The ROYGBIV colors are red, orange, yellow, green, blue, indigo, violet.");
 				favoriteColor = input.nextLine();
-			}
-			else if	(favoriteColor.equals ("red") || favoriteColor.equals("orange") || favoriteColor.equals("yellow")
-						|| favoriteColor.equals("green") || favoriteColor.equals("blue") || favoriteColor.equals("indigo")
-						|| favoriteColor.equals("violet"))
-			break;
+			} else if (favoriteColor.equals("red") || favoriteColor.equals("orange") || favoriteColor.equals("yellow")
+					|| favoriteColor.equals("green") || favoriteColor.equals("blue") || favoriteColor.equals("indigo")
+					|| favoriteColor.equals("violet"))
+				break;
 			else {
 				System.out.println("You need to enter your favorite ROYGBIV color, not something else.");
-				favoriteColor = input.nextLine();}
-		
+				favoriteColor = input.nextLine();
+			}
+
 //siblings
 		System.out.println("How many siblings do you have?");
 		String siblings = input.nextLine();
 		double siblingsAsNumber = Double.parseDouble(siblings);
 
 //final return *[First Name]* *[Last Name]* will retire in *[# of years]* with *[bank balance]* in the bank, a vacation home in *[location]*, and travel by *[mode of transporation]*.
-		System.out.println(firstName + " " + lastName + " " + ageAsNumber + " "+ birthAsNumber + " " + favoriteColor + " "+ siblingsAsNumber);
+//test variables		System.out.println(firstName + " " + lastName + " " + ageAsNumber + " "+ birthAsNumber + " " + favoriteColor + " "+ siblingsAsNumber);
+
 		input.close();
 	}
 
