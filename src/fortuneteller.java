@@ -4,39 +4,26 @@ import java.time.Month;
 public class fortuneteller {
 
 	public static void main(String[] args) {
-//variables
-//		String firstName = "";
-//		String lastName = "";
-//		String age = "0";
-//		String birthMonth = "0";
-//		String favoriteColor = "";
-//		String siblings = "0";
-//questions
-//		System.out.println("What is your first name?");
-//		System.out.println("What is your last name?");
-//		System.out.println("What is your age?");
-//		System.out.println("What is your birth month as a number (for example if you were born in March type 3?");
-//		System.out.println("What is your favorite ROYGBIV color?");
-//		System.out.println("How many siblings do you have?"); // trap for question what is a sibling
+
 //function core
 
 		Scanner input = new Scanner(System.in);
-//first name
+//first name input
 
 		System.out.println("What is your first name?");
 		String firstName = input.nextLine();
 
-//last name
+//last name input
 
 		System.out.println("What is your last name?");
 		String lastName = input.nextLine();
 
-//age
+//age input
 		System.out.println("What is your age?");
 		String age = input.nextLine();
 		double ageAsNumber = Double.parseDouble(age);
 
-//birth month 
+//birth month input
 		System.out.println("What is your birth month?");
 		String birthMonth = input.nextLine();
 		double birthAsNumber;
@@ -49,7 +36,7 @@ public class fortuneteller {
 			birthAsNumber = Double.parseDouble(birthMonth);
 		}
 
-//Favorite color
+//Favorite color input
 		System.out.println("What is your favorite ROYGBIV color?");
 		String favoriteColor = input.nextLine();
 		while (!favoriteColor.equals("red") || !favoriteColor.equals("orange") || !favoriteColor.equals("yellow")
@@ -67,15 +54,12 @@ public class fortuneteller {
 				favoriteColor = input.nextLine();
 			}
 
-//siblings
+//siblings input
 		System.out.println("How many siblings do you have?");
 		String siblings = input.nextLine();
 		double siblingsAsNumber = Double.parseDouble(siblings);
 
-//final return *[First Name]* *[Last Name]* will retire in *[# of years]* with *[bank balance]* in the bank, a vacation home in *[location]*, and travel by *[mode of transporation]*.
-//test variables		System.out.println(firstName + " " + lastName + " " + ageAsNumber + " "+ birthAsNumber + " " + favoriteColor + " "+ siblingsAsNumber);
-
-//exceeds or fails to meet a reasonable age
+//exceeds or fails to meet a reasonable age or month is beyond 12
 
 		if (ageAsNumber > 70 && ageAsNumber < 120) {
 			System.out.println(firstName + " " + lastName
@@ -123,6 +107,9 @@ public class fortuneteller {
 		if (siblingsInt > 5) {
 			siblingsInt = 6;
 		}
+		else if (siblingsInt <1) {
+			siblingsInt = 7;
+		}
 		String siblingsString = "";
 		switch (siblingsInt) {
 		case 1:
@@ -142,6 +129,9 @@ public class fortuneteller {
 			break;
 		case 6:
 			siblingsString = "Gallway, Ireland";
+			break;
+		case 7:
+			siblingsString = "the Center of a blackhole (because you were trying to be clever)";
 			break;
 		}
 		
