@@ -55,8 +55,14 @@ public class fortuneteller {
 				|| !favoriteColor.equals("violet"))
 			if (favoriteColor.equals("Help") || favoriteColor.equals("help") || favoriteColor.equals("HELP")) {
 				System.out.println("The ROYGBIV colors are red, orange, yellow, green, blue, indigo, violet.");
-			} else {
-				System.out.println("What is your favorite ROYGBIV color?");
+				favoriteColor = input.nextLine();
+			}
+			else if	(favoriteColor.equals ("red") || favoriteColor.equals("orange") || favoriteColor.equals("yellow")
+						|| favoriteColor.equals("green") || favoriteColor.equals("blue") || favoriteColor.equals("indigo")
+						|| favoriteColor.equals("violet"))
+			break;
+			else {
+				System.out.println("You need to enter your favorite ROYGBIV color, not something else.");
 				favoriteColor = input.nextLine();}
 		
 //siblings
