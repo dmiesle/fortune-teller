@@ -39,12 +39,14 @@ public class fortuneteller {
 //birth month 
 		System.out.println("What is your birth month?");
 		String birthMonth = input.nextLine();
+		double birthAsNumber;
 		int monthlength = birthMonth.length();
 		if (monthlength > 2) {
 			String birthUpper = birthMonth.toUpperCase();
-			Month birthAsNumber = Month.valueOf(birthUpper);
+			Month birthNumber = Month.valueOf(birthUpper);
+			birthNumber = birthNumber.getValue();
 		} else {
-			double birthAsNumber = Double.parseDouble(birthMonth);
+			birthAsNumber = Double.parseDouble(birthMonth);
 		}
 
 //Favorite color
