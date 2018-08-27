@@ -11,7 +11,7 @@ public class fortuneteller {
 //		String birthMonth = "0";
 //		String favoriteColor = "";
 //		String siblings = "0";
-//questions - double value = Double.parseDouble(text)
+//questions
 //		System.out.println("What is your first name?");
 //		System.out.println("What is your last name?");
 //		System.out.println("What is your age?");
@@ -66,12 +66,12 @@ public class fortuneteller {
 				favoriteColor = input.nextLine();}
 		
 //siblings
-				System.out.println("How many siblings do you have?");
+		System.out.println("How many siblings do you have?");
 		String siblings = input.nextLine();
 		double siblingsAsNumber = Double.parseDouble(siblings);
 
 //final return *[First Name]* *[Last Name]* will retire in *[# of years]* with *[bank balance]* in the bank, a vacation home in *[location]*, and travel by *[mode of transporation]*.
-
+		System.out.println(firstName + " " + lastName + " " + ageAsNumber + " "+ birthAsNumber + " " + favoriteColor + " "+ siblingsAsNumber);
 		input.close();
 	}
 
