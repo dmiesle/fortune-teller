@@ -101,20 +101,21 @@ public class fortuneteller {
 		double retirementAge = (70 - ageAsNumber);
 
 //values for bank balance
+		String balance = "";
 		if (birthAsNumber == 3) {
-			String balance = "$50,000,000";
+			balance = "$50,000,000";
 		} else if (birthAsNumber == 9) {
-			String balance = "$4,567,890";
+			balance = "$4,567,890";
 		} else if (birthAsNumber == 12) {
-			String balance = "$9,876,543";
+			balance = "$9,876,543";
 		} else if (birthAsNumber == 1) {
-			String balance = "$0";
+			balance = "$0";
 		} else if (birthAsNumber == 2) {
-			String balance = "$324,741";
+			balance = "$324,741";
 		} else if (birthAsNumber > 3 && birthAsNumber < 9) {
-			String balance = "$185,453";
+			balance = "$185,453";
 		} else if (birthAsNumber > 3 && birthAsNumber < 12) {
-			String balance = "$754,135";
+			balance = "$754,135";
 		}
 
 //values for vacation home
@@ -122,7 +123,7 @@ public class fortuneteller {
 		if (siblingsInt > 5) {
 			siblingsInt = 6;
 		}
-		String siblingsString;
+		String siblingsString = "";
 		switch (siblingsInt) {
 		case 1:
 			siblingsString = "Boca Raton, Florida with your parents";
@@ -143,7 +144,32 @@ public class fortuneteller {
 			siblingsString = "Gallway, Ireland";
 			break;
 		}
-
+		
+//Transportation options
+		String transportation = "";
+		if (favoriteColor.equals("red")){
+			transportation = "Ford Fiesta";
+		}	
+		else if (favoriteColor.equals("orange")) {
+			transportation = "Mule";			
+		}
+		else if (favoriteColor.equals("yellow")) {
+			transportation = "Tesla X3";
+		}
+		else if (favoriteColor.equals("green")) {
+			transportation = "Toyota Camery";
+		}
+		else if (favoriteColor.equals("blue")) {
+			transportation = "Volkswagon Jetta";
+		}
+		else if	(favoriteColor.equals("indigo")) {
+			transportation = "Lear Jet";
+		}
+		else if (favoriteColor.equals("violet")) {
+			transportation = "Bicycle";
+		}
+//Final output Fortune
+		System.out.println(firstName + " " + lastName + " will retire in " + retirementAge + "years with "+ balance + " in the bank, a vacation home in " + siblingsString + ", and travel by " + transportation + ".");
 		// end
 		input.close();
 	}
