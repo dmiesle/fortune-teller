@@ -75,6 +75,27 @@ public class fortuneteller {
 //final return *[First Name]* *[Last Name]* will retire in *[# of years]* with *[bank balance]* in the bank, a vacation home in *[location]*, and travel by *[mode of transporation]*.
 //test variables		System.out.println(firstName + " " + lastName + " " + ageAsNumber + " "+ birthAsNumber + " " + favoriteColor + " "+ siblingsAsNumber);
 
+//exceeds or fails to meet a reasonable age
+		
+		if (ageAsNumber > 70 && ageAsNumber <120) {
+			System.out.println(firstName + " " + lastName + ", you are already retired. Enjoy your life and stop worring about the future. Unless you go back to school and start a new carrer you have what you have");
+			System.exit(0);
+		}
+		else if (ageAsNumber >=120 && ageAsNumber <= 200000) {
+			System.out.println(firstName + " " + lastName + " you are long dead. Tell me why you are so interested in this program? Why don't you tell me your fortune?");
+			System.exit(0);
+		}
+		else if (ageAsNumber >200000) {
+			System.out.println("Winter is coming.");
+			System.exit(0);
+		}
+		else if (ageAsNumber <= 0) {
+			System.out.println(firstName + " " + lastName + " , you do not exist. Therefore time is irrellevant, as are fortunes.");
+			System.exit(0);
+		}
+		
+		
+		//end
 		input.close();
 	}
 
