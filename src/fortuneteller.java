@@ -42,7 +42,7 @@ public class fortuneteller {
 		while (!favoriteColor.equals("red") || !favoriteColor.equalsIgnoreCase("orange") || !favoriteColor.equalsIgnoreCase("yellow")
 				|| !favoriteColor.equalsIgnoreCase("green") || !favoriteColor.equalsIgnoreCase("blue") || !favoriteColor.equalsIgnoreCase("indigo")
 				|| !favoriteColor.equalsIgnoreCase("violet"))
-			if (favoriteColor.equalsIgnoreCase("help") {
+			if (favoriteColor.equalsIgnoreCase("Help") || favoriteColor.equalsIgnoreCase("help") || favoriteColor.equals("HELP")) {
 				System.out.println("The ROYGBIV colors are red, orange, yellow, green, blue, indigo, violet.");
 				favoriteColor = input.nextLine();
 			} else if (favoriteColor.equalsIgnoreCase("red") || favoriteColor.equalsIgnoreCase("orange") || favoriteColor.equalsIgnoreCase("yellow")
