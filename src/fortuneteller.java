@@ -27,8 +27,8 @@ public class fortuneteller {
 		System.out.println("What is your birth month?");
 		String birthMonth = input.nextLine();
 		double birthAsNumber;
-		int monthlength = birthMonth.length();
-		if (monthlength > 2) {
+		int monthLength = birthMonth.length();
+		if (monthLength > 2) {
 			String birthUpper = birthMonth.toUpperCase();
 			Month birthNumber = Month.valueOf(birthUpper);
 			birthAsNumber = birthNumber.getValue();
@@ -63,22 +63,22 @@ public class fortuneteller {
 
 		if (ageAsNumber > 70 && ageAsNumber < 120) {
 			System.out.println(firstName + " " + lastName
-					+ ", you are already retired. Enjoy your life and stop worring about the future. Unless you go back to school and start a new carrer you have what you have");
+					+ ", you are already retired. Enjoy your life and stop worring about the future. Unless you go back to school and start a new carrer, you have what you have.");
 			System.exit(0);
 		} else if (ageAsNumber >= 120 && ageAsNumber <= 200000) {
 			System.out.println(firstName + " " + lastName
-					+ " you are long dead. Tell me why you are so interested in this program? Why don't you tell me your fortune?");
+					+ ", you are long dead. Tell me why you are so interested in this program? Why don't you tell me my fortune?");
 			System.exit(0);
 		} else if (ageAsNumber > 200000) {
 			System.out.println("Winter is coming.");
 			System.exit(0);
 		} else if (ageAsNumber <= 0) {
 			System.out.println(firstName + " " + lastName
-					+ " , you do not exist. Therefore time is irrellevant, as are fortunes.");
+					+ ", you do not exist. Therefore time is irrellevant, as are fortunes.");
 			System.exit(0);
 		} else if (birthAsNumber > 12) {
 			System.out.println(firstName + " " + lastName
-					+ " , you are in jail for forging Federal Documents, and will die there.");
+					+ ", you are in jail for forging Federal Documents, and will die there penniless and alone.");
 			System.exit(0);
 		}
 //values for retirement years based on age
@@ -159,7 +159,7 @@ public class fortuneteller {
 			transportation = "Bicycle";
 		}
 //Final output Fortune
-		System.out.println(firstName + " " + lastName + " will retire in " + retirementAge + "years with "+ balance + " in the bank, a vacation home in " + siblingsString + ", and travel by " + transportation + ".");
+		System.out.println(firstName + " " + lastName + " will retire in " + retirementAge + " years with "+ balance + " in the bank, a vacation home in " + siblingsString + ", and travel by " + transportation + ".");
 		// end
 		input.close();
 	}
