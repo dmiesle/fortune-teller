@@ -137,25 +137,25 @@ public class fortuneteller {
 		
 //Transportation options
 		String transportation = "";
-		if (favoriteColor.equals("red")){
+		if (favoriteColor.equalsIgnoreCase("red")){
 			transportation = "Ford Fiesta";
 		}	
-		else if (favoriteColor.equals("orange")) {
+		else if (favoriteColor.equalsIgnoreCase("orange")) {
 			transportation = "Mule";			
 		}
-		else if (favoriteColor.equals("yellow")) {
+		else if (favoriteColor.equalsIgnoreCase("yellow")) {
 			transportation = "Tesla X3";
 		}
-		else if (favoriteColor.equals("green")) {
+		else if (favoriteColor.equalsIgnoreCase("green")) {
 			transportation = "Toyota Camery";
 		}
-		else if (favoriteColor.equals("blue")) {
+		else if (favoriteColor.equalsIgnoreCase("blue")) {
 			transportation = "Volkswagon Jetta";
 		}
-		else if	(favoriteColor.equals("indigo")) {
+		else if	(favoriteColor.equalsIgnoreCase("indigo")) {
 			transportation = "Lear Jet";
 		}
-		else if (favoriteColor.equals("violet")) {
+		else if (favoriteColor.equalsIgnoreCase("violet")) {
 			transportation = "Bicycle";
 		}
 //Final output Fortune
